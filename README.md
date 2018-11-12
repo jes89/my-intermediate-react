@@ -26,7 +26,7 @@
 
 <br>
 
-#### I can use constructior method when I want to define defaultValue of state
+#### I can use constructor method when I want to define defaultValue of state
     
     this.state = {
         idx : 0
