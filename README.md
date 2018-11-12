@@ -11,6 +11,7 @@
     }
     
 
+
 #### I need to define propsTypes that's why I need to check the class always can get right parmeters or not.
     
     Class MyComponent extends Component {
@@ -21,6 +22,7 @@
         name : PropTypes.string, 
         name2 : PropTypes.string.isRequired
     }
+
 
 #### I can use constructior method when I want to define defaultValue of state
     
@@ -44,6 +46,7 @@
     }
     
 
+
 #### If I don't use setState method when I change value of state, it is not rendered.
     
     this.state.idx = 1000;  // idx values is changed but the render is not working
@@ -53,11 +56,13 @@
 
     
     
+    
 #### When I bind method, it should be in the constructor. However, it is anooything to add the bind whenver I make mothed more and more. I don't have to bind my method as long as I use transform-class-propertues in babel
     
     onChangeEventHandler = (e) => {
         this.setState({message : e.target.value})
     }
+    
     
 #### the state property is able to have or be called dynamic keys in a real time
     this.setState({
