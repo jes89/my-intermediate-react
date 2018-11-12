@@ -153,18 +153,26 @@
     yarn add include-media open-color
     
     
-#### I can define elements with style through the styled-components
+#### I can define elements with style through the styled-components. It makes me use css and javascript together with the fact that it will be defined in javascript source
 
     yarn add styled-components
     
     const Wrapper = styled.div`
-        font-size: 1.5em;
-        text-align: center;
-        color: palevioletred;
-        `
-    const StyleButton = ({children, ...rest}) => {
+        border : 1px solid black;
+        display : inline-block;
+        paddding : 1rem;
+        border-radius : 3px;
+        font-size : ${(props) => props.fontSize};
+            ${props => props.big && `font-size : 2rem; padding : 2rem;`}
+        &:hover {
+            background : black;
+            color : white;
+        }
+    `;
+
+    const StyleButton = ({children,big, ...rest}) => {
         return (
-            <Wrapper {...rest}>
+            <Wrapper fontSize="1.25rem" {...rest} big={big}>
                 {children}
             </Wrapper>
         );
