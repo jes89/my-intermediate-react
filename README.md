@@ -152,7 +152,8 @@
     
     yarn add include-media open-color
     
-    
+<br>
+
 #### I can define elements with style through the styled-components. It makes me use css and javascript together with the fact that it will be defined in javascript source
 
     yarn add styled-components
@@ -177,5 +178,6 @@
             </Wrapper>
         );
     }
-        
+
+<br>
         
