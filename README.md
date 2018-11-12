@@ -153,3 +153,21 @@
     yarn add include-media open-color
     
     
+#### I can define elements with style through the styled-components
+
+    yarn add styled-components
+    
+    const Wrapper = styled.div`
+        font-size: 1.5em;
+        text-align: center;
+        color: palevioletred;
+        `
+    const StyleButton = ({children, ...rest}) => {
+        return (
+            <Wrapper {...rest}>
+                {children}
+            </Wrapper>
+        );
+    }
+        
+        
