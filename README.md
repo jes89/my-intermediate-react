@@ -117,6 +117,10 @@
 
 #### when I write css on a styleSheet, I can use css preprocessor using Sass, Less, Stylus etc.
 
+[ssas](https://sass-guidelin.es/ko/)
+
+    yarn add node-sass sass-loader 
+
     .App {...}
     .App .header {...}
     .App .logo {...}
