@@ -41,3 +41,9 @@
         do Something more with state
     }
     
+
+#### IF I don't use setState method when I change value of state, it is not rendered.
+    
+    this.state.idx = 1000;  // idx values is changed but the render is not working
+    
+    
