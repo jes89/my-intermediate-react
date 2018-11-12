@@ -125,7 +125,7 @@
     
     .App {
        .header {...}
-        .logo {...}
+       .logo {...}
     }
     
 <br/>
