@@ -103,7 +103,7 @@
     
 <br>
 
-#### the time that component can be updated
+#### The time that component can be updated
 - the props are changed
 - the states are changed
 - the parents's component is rendered again
