@@ -181,3 +181,14 @@
 
 <br>
         
+####  When I need "Code Splitting", I need to change some of the contents of the config files.
+   
+    git pull 
+    git add .
+    git commit "commit before eject"
+    git push origin "master"
+   
+    yarn eject
+    
+    check the my root folder in my project.
+    
