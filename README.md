@@ -70,4 +70,20 @@
     })
     
 
+#### I'd better to use ref instead of id. Due to that fact that the broser can be some element that have same ID because renderer make a lot of components using class. As a result, ID may not be unique anymore.
+    
+    <input ref={(ref) => {this.targetInput = ref}} type='text' ></input>
+    
+    onClickEventHandler = (e) => {
+        alert(this.state.message);
+        this.targetInput.focus();
+    }
+    
+    
+
+    
+    
+    
+
+    
 
