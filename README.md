@@ -38,6 +38,6 @@
             idx : 0
         }
         
-        doSomething more 
+        do Something more with state
     }
     
