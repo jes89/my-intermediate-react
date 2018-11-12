@@ -94,8 +94,11 @@
 
         const numArr = [0,1,2,3,4,5,6,7,8,9];
         const moreNumArr = [...numArr, 10,11,12];
-    
-    
+        
+        or 
+        
+        const numArr = [0,1,2,3,4,5,6,7,8,9];
+        const moreNumArr = [-3,-2,-1,...numArr];
 
     
 
