@@ -115,7 +115,7 @@
 
 <br/>
 
-#### when I write css on a styleSheet, I can use css preprocessor.
+#### when I write css on a styleSheet, I can use css preprocessor using Sass, Less,Stylus etc.
 
     .App {...}
     .App .header {...}
