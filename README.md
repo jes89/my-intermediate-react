@@ -192,42 +192,10 @@
     
     check the my root folder in my project.
 
-#### project setting 
-    
-    /config/webpack.config.dev.js (sass-loader settings)
-    
-     const getStyleLoaders = (cssOptions, preProcessor) => {
-      const loaders = [
-        require.resolve('style-loader'),
-        {
-          loader: require.resolve('css-loader'),
-          options: cssOptions,
-        },
-        {
-          loader: require.resolve('postcss-loader'),
-          options: {
-            ...
-          },
-        }, 
-        {
-          loader: require.resolve('sass-loader'),
-          options: {
-            includePaths : [paths.styles]
-          },
-        },
+#### I can "destructuring assignment" in order to reduce use rate of "this"
 
-      ];
-      if (preProcessor) {
-        loaders.push(require.resolve(preProcessor));
-      }
-      return loaders;
-    };
-    
-        
-    /config/paths.js
-    module.exports = {
-      ...
-      styles: resolveApp('src/styles') //add the style Path
-    }
-    
+      const {done, children, onToggle, onRemove} = this.props;
+      
+
+<br>
 
