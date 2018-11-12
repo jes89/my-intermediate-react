@@ -195,24 +195,32 @@
 #### project setting 
     
     /config/webpack.config.dev.js (sass-loader settings)
-    const getStyleLoaders = (cssOptions, preProcessor) => {
+    
+     const getStyleLoaders = (cssOptions, preProcessor) => {
       const loaders = [
-        ...
+        require.resolve('style-loader'),
+        {
+          loader: require.resolve('css-loader'),
+          options: cssOptions,
         },
         {
           loader: require.resolve('postcss-loader'),
           options: {
-           ...
+            ...
+          },
+        }, 
+        {
+          loader: require.resolve('sass-loader'),
+          options: {
+            includePaths : [paths.styles]
           },
         },
-        {  
-          loader : require('sass-loader'),       //add loader
-          options : {                            //add options
-            includePaths : [paths.styles]       
-          }
-        }
+
       ];
-      ...
+      if (preProcessor) {
+        loaders.push(require.resolve(preProcessor));
+      }
+      return loaders;
     };
     
         
