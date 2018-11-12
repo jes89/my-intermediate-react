@@ -59,7 +59,7 @@
         this.setState({message : e.target.value})
     }
     
-#### the state property is able to have dynamic keys in a real time
+#### the state property is able to have or be called dynamic keys in a real time
     this.setState({
         [e.target.name] = e.target.value
     })
