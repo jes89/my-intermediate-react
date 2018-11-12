@@ -110,5 +110,9 @@
 - when I call the this.forceUpdate method
 
 
+#### If I use functional component instead of class component. the clients can have better experience in rendering speed Since there's no lifecycle, state and props . it is just rendered.
+
+<br/>
+
 
 
