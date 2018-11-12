@@ -9,3 +9,15 @@
     MyComponent.defaultProps = {
         name : 'jes'
     }
+    
+
+#### I neet to define propsTypes that's why I can check the class always can get right parmeters or not
+    
+    Class MyComponent extends Component {
+        something
+    }
+    
+    MyComponent.PropTypes = {
+        name : PropTypes.string, 
+        name2 : PropTypes.string.isRequired
+    }
