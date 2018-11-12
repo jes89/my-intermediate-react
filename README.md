@@ -39,7 +39,8 @@
         }
         
         this.onChangeEventHandler = this.onChangeEventHandler.bind(this);
-        do Something more with state
+        
+        do Something more
     }
     
 
