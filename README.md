@@ -38,6 +38,7 @@
             idx : 0
         }
         
+        this.onChangeEventHandler = this.onChangeEventHandler.bind(this);
         do Something more with state
     }
     
