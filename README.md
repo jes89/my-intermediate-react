@@ -86,8 +86,11 @@
     
     //and I can use ref keyword at Component
     <MyComponent ref={(ref) => {this.targetComponent = ref}} ></MyComponent>
+    <button onClick={()=> {this.targetComponent.scrollBottom()}} ></button>
     
-    
+<br>
+
+
 
     
     
