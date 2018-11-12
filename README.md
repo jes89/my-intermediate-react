@@ -24,6 +24,8 @@
         name2 : PropTypes.string.isRequired
     }
 
+<br>
+
 #### I can use constructior method when I want to define defaultValue of state
     
     this.state = {
@@ -45,7 +47,7 @@
         do Something more
     }
     
-
+<br>
 
 #### If I don't use setState method when I change value of state, it is not rendered.
     
@@ -55,20 +57,23 @@
                             //For instance, the shouldComponentUpdate method will not be called. 
 
     
-    
+
+<br>
     
 #### When I bind method, it should be in the constructor. However, it is anooything to add the bind whenver I make mothed more and more. I don't have to bind my method as long as I use transform-class-propertues in babel
     
     onChangeEventHandler = (e) => {
         this.setState({message : e.target.value})
     }
-    
+
+<br>
     
 #### the state property is able to have or be called dynamic keys in a real time
     this.setState({
         [e.target.name] = e.target.value
     })
     
+<br>
 
 #### I'd better to use ref instead of id. Due to that fact that the broser can be some element that have same ID because renderer make a lot of components using class. As a result, ID may not be unique anymore.
     
