@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
+    "include-media": "^1.4.9",
+    "node-sass": "^4.10.0",
+    "open-color": "^1.6.3",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "sass-loader": "^7.1.0",
+    "styled-components": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +27,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/jes89/my-intermediate-react.git",
+  "author": "jes89 <hiter00@naver.com>",
+  "license": "MIT"
 }

@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MyComponent from './MyComponent';
+import Button from './components/Button';
+import StyleButton from './components/styleButton';
 import './App.css';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <MyComponent name="React" ref={(ref) => {this.MyComponent = ref}} ></MyComponent>
+        <Button>버튼</Button>
+        <StyleButton big={true}>버튼</StyleButton>
       </div>
     );
   }
