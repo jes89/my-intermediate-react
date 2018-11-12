@@ -191,4 +191,50 @@
     yarn eject
     
     check the my root folder in my project.
+
+#### project setting 
     
+    /config/webpack.config.dev.js (sass-loader settings)
+    const getStyleLoaders = (cssOptions, preProcessor) => {
+      const loaders = [
+        require.resolve('style-loader'),
+        {
+          loader: require.resolve('css-loader'),
+          options: cssOptions,
+        },
+        {
+          loader: require.resolve('postcss-loader'),
+          options: {
+            ident: 'postcss',
+            plugins: () => [
+              require('postcss-flexbugs-fixes'),
+              require('postcss-preset-env')({
+                autoprefixer: {
+                  flexbox: 'no-2009',
+                },
+                stage: 3,
+              }),
+            ],
+          },
+        },
+        {  
+          loader : require('sass-loader'),       //add loader
+          options : {                            //add options
+            includePaths : [paths.styles]       
+          }
+        }
+      ];
+      if (preProcessor) {
+        loaders.push(require.resolve(preProcessor));
+      }
+      return loaders;
+    };
+    
+        
+    /config/paths.js
+    module.exports = {
+      ...
+      styles: resolveApp('src/styles') //add the style Path
+    }
+    
+
