@@ -1,5 +1,6 @@
 # my note
 
+
 #### I can define default props when I want define default props.
     
     Class MyComponent extends Component {
@@ -10,7 +11,7 @@
         name : 'jes'
     }
     
-
+<br>
 
 #### I need to define propsTypes that's why I need to check the class always can get right parmeters or not.
     
@@ -22,7 +23,6 @@
         name : PropTypes.string, 
         name2 : PropTypes.string.isRequired
     }
-
 
 #### I can use constructior method when I want to define defaultValue of state
     
