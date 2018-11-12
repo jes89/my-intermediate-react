@@ -11,7 +11,7 @@
     }
     
 
-#### I neet to define propsTypes that's why I can check the class always can get right parmeters or not
+#### I neet to define propsTypes that's why I need to check the class always can get right parmeters or not
     
     Class MyComponent extends Component {
         something
