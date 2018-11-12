@@ -46,4 +46,9 @@
     
     this.state.idx = 1000;  // idx values is changed but the render is not working
     
+    this.forceUpdate();     // I can call render method by forceUpdate but there are some isuue when I use it. For instance, 
+                            // the shouldComponentUpdate method is not called. 
+
+    
+    
     
