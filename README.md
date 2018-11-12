@@ -17,7 +17,7 @@
         something
     }
     
-    MyComponent.PropTypes = {
+    MyComponent.propTypes = {
         name : PropTypes.string, 
         name2 : PropTypes.string.isRequired
     }
