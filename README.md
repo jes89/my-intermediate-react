@@ -115,9 +115,9 @@
 
 <br/>
 
-#### when I write css on a styleSheet, I can use css preprocessor using Sass, Less, Stylus etc.
+#### when I write css on a styleSheet, I can use css preprocessor using [Ssas](https://sass-guidelin.es/ko/), Less, Stylus etc.
 
-[ssas](https://sass-guidelin.es/ko/)
+
 
     yarn add node-sass sass-loader 
 
