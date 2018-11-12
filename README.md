@@ -130,6 +130,18 @@
     
 <br/>
 
+#### when I define className on elements, it is more simpler to use "classnames" lib
+
+    yarn add classnames
+    
+    const cx = classNames.bind(styles);
+    const isRed = true;
+    
+    <div className={cx('box','blue',{
+        red : isRed
+    })} ></div>    
+    
+<br/>
 
 
 
