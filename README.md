@@ -109,10 +109,27 @@
 - the parents's component is rendered again
 - when I call the this.forceUpdate method
 
+<br/>
 
-#### If I use functional component instead of class component. the clients can have better experience in rendering speed Since there's no lifecycle, state and props . it is just rendered.
+#### If I use functional component instead of class component, the clients will have better experience in rendering speed Since there's no lifecycle, state and props . it is just rendered.
 
 <br/>
+
+#### when I write css on a styleSheet, I can use css preprocessor.
+
+    .App {...}
+    .App .header {...}
+    .App .logo {...}
+    
+    instead of that
+    
+    .App {
+       .header {...}
+        .logo {...}
+    }
+    
+<br/>
+
 
 
 
