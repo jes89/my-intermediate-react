@@ -13,7 +13,7 @@
     
 <br>
 
-### I need to define propsTypes that's why I need to check the class always can get right parmeters or not.
+### I need to define propTypes that's whyIt is necessary to check that the class receive always right parameters or not.
     
     Class MyComponent extends Component {
         something
