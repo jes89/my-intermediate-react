@@ -199,3 +199,20 @@
 
 <br>
 
+
+#### By using shouldComponentUpdate, we identified improvements in performance. There is a need to check that performance can be optimized Whenever I develop the project.
+    
+    
+    shouldComponentUpdate(nextProps, nextState){
+        return this.props.done !== nextProps.done;
+    }
+    
+    Before I add that code : Scripting 105.0ms, Rendering 49.6ms, Painting 5.2ms, Other 68.9ms
+    After I add that code : Scripting 68.ms, Rendering 29.1ms, Painting 5.8ms, Other 50.4ms 
+    
+    
+    
+
+   
+    
+
