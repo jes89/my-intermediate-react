@@ -1,7 +1,7 @@
 # my note
 
 
-### I am allowed to define default props when I want define default props.
+### I am allowed to define default props when I want to define default props.
     
     Class MyComponent extends Component {
         something
