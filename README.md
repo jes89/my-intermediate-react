@@ -75,7 +75,7 @@
     
 <br>
 
-### I'd better to use ref instead of id. Due to that fact that the broser can be some element that have same ID because renderer make a lot of components using class. As a result, ID may not be unique anymore.
+### I'd better to use ref instead of id. Due to that fact that the browser can be some element that have same ID because renderer make a lot of components using class. As a result, ID may not be unique anymore.
     
     <input ref={(ref) => {this.targetInput = ref}} type='text' ></input>
       
@@ -90,7 +90,7 @@
     
 <br>
 
-### If I want copy a array and push data, I can use "spread operator"
+### If I want  copy a array and push data, I can use "spread operator"
 
         const numArr = [0,1,2,3,4,5,6,7,8,9];
         const moreNumArr = [...numArr, 10,11,12];
