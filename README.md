@@ -1,7 +1,7 @@
 # my note
 
 
-#### I am allowed to define default props when I want define default props.
+### I am allowed to define default props when I want define default props.
     
     Class MyComponent extends Component {
         something
@@ -13,7 +13,7 @@
     
 <br>
 
-#### I need to define propsTypes that's why I need to check the class always can get right parmeters or not.
+### I need to define propsTypes that's why I need to check the class always can get right parmeters or not.
     
     Class MyComponent extends Component {
         something
@@ -26,7 +26,7 @@
 
 <br>
 
-#### I can use constructor method when I want to define defaultValue of state
+### I can use constructor method when I want to define defaultValue of state
     
     this.state = {
         idx : 0
@@ -49,7 +49,7 @@
     
 <br>
 
-#### If I don't use setState method when I change value of state, it is not rendered.
+### If I don't use setState method when I change value of state, it is not rendered.
     
     this.state.idx = 1000;  // idx values is changed but the render is not working
     
@@ -60,7 +60,7 @@
 
 <br>
     
-#### When I bind method, it should be in the constructor. However, it is anooything to add the bind whenver I make mothed more and more. I don't have to bind my method as long as I use transform-class-propertues in babel
+### When I bind method, it should be in the constructor. However, it is anooything to add the bind whenver I make mothed more and more. I don't have to bind my method as long as I use transform-class-propertues in babel
     
     onChangeEventHandler = (e) => {
         this.setState({message : e.target.value})
@@ -68,14 +68,14 @@
 
 <br>
     
-#### the state property is able to have or be called dynamic keys in a real time
+### the state property is able to have or be called dynamic keys in a real time
     this.setState({
         [e.target.name] = e.target.value
     })
     
 <br>
 
-#### I'd better to use ref instead of id. Due to that fact that the broser can be some element that have same ID because renderer make a lot of components using class. As a result, ID may not be unique anymore.
+### I'd better to use ref instead of id. Due to that fact that the broser can be some element that have same ID because renderer make a lot of components using class. As a result, ID may not be unique anymore.
     
     <input ref={(ref) => {this.targetInput = ref}} type='text' ></input>
       
@@ -90,7 +90,7 @@
     
 <br>
 
-#### If I want copy a array and push data, I can use "spread operator"
+### If I want copy a array and push data, I can use "spread operator"
 
         const numArr = [0,1,2,3,4,5,6,7,8,9];
         const moreNumArr = [...numArr, 10,11,12];
@@ -103,7 +103,7 @@
     
 <br>
 
-#### The time that component can be updated
+### The time that component can be updated
 - the props are changed
 - the states are changed
 - the parents's component is rendered again
@@ -111,11 +111,11 @@
 
 <br/>
 
-#### If I use functional component instead of class component, the clients will have better experience in rendering speed Since there's no lifecycle, state and props . it is just rendered.
+### If I use functional component instead of class component, the clients will have better experience in rendering speed Since there's no lifecycle, state and props . it is just rendered.
 
 <br/>
 
-#### when I write css on a styleSheet, I can use css preprocessor using [Ssas](https://sass-guidelin.es/ko/), Less, Stylus etc.
+### when I write css on a styleSheet, I can use css preprocessor using [Ssas](https://sass-guidelin.es/ko/), Less, Stylus etc.
 
 
 
@@ -134,7 +134,7 @@
     
 <br/>
 
-#### when I define className on elements, it is more simpler to use "classnames" lib
+### when I define className on elements, it is more simpler to use "classnames" lib
 
     yarn add classnames
     
@@ -148,13 +148,13 @@
 <br/>
 
 
-#### I can make Responsive Web simply using include-media and [open-color](https://yeun.github.io/open-color/) 
+### I can make Responsive Web simply using include-media and [open-color](https://yeun.github.io/open-color/) 
     
     yarn add include-media open-color
     
 <br>
 
-#### I can define elements with style through the styled-components. It makes me use css and javascript together with the fact that it will be defined in javascript source
+### I can define elements with style through the styled-components. It makes me use css and javascript together with the fact that it will be defined in javascript source
 
     yarn add styled-components
     
@@ -181,7 +181,7 @@
 
 <br>
         
-####  When I need "Code Splitting", I need to change some of the contents of the config files.
+###  When I need "Code Splitting", I need to change some of the contents of the config files.
    
     git pull 
     git add .
@@ -192,7 +192,7 @@
     
     check the my root folder in my project.
 
-#### I can "destructuring assignment" in order to reduce use rate of "this"
+### I can "destructuring assignment" in order to reduce use rate of "this"
 
       const {done, children, onToggle, onRemove} = this.props;
       
@@ -200,7 +200,7 @@
 <br>
 
 
-#### By using shouldComponentUpdate, we identified improvements in performance. There is a need to check that performance can be optimized Whenever I develop the project.
+### By using shouldComponentUpdate, we identified improvements in performance. There is a need to check that performance can be optimized Whenever I develop the project.
 
     shouldComponentUpdate(nextProps, nextState){
         return this.props.done !== nextProps.done;
@@ -216,9 +216,9 @@
 
 <br>
 
-#### when I send a lot of props to subcompoents, I need to send useless props to some of their parent in the parent components. it is one of ways to damage the readability of the code. I can prevent this using Redux.
+### when I send a lot of props to subcompoents, I need to send useless props to some of their parent in the parent components. it is one of ways to damage the readability of the code. I can prevent this using Redux.
   
-###### things I never do when I use Redux.
+##### things I never do when I use Redux.
 1. Don't create store than more one. but I can create reduxer more than one.
 2. The state is for reading only. It can lead to some bugs when Redux is working.
 3. every change has to be by Redux function. the result with same parameters have to return same result always. Don't use new Date(), Math.random or something like that include DataBase Data.
