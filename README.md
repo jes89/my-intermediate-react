@@ -90,7 +90,7 @@
     
 <br>
 
-### If I want  copy a array and push data, I can use "spread operator"
+### If I want to copy a array and push data, I can use "spread operator"
 
         const numArr = [0,1,2,3,4,5,6,7,8,9];
         const moreNumArr = [...numArr, 10,11,12];
