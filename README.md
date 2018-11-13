@@ -201,8 +201,7 @@
 
 
 #### By using shouldComponentUpdate, we identified improvements in performance. There is a need to check that performance can be optimized Whenever I develop the project.
-    
-    
+
     shouldComponentUpdate(nextProps, nextState){
         return this.props.done !== nextProps.done;
     }
@@ -210,11 +209,24 @@
     Before I add that code  : Scripting 105.0ms , Rendering 49.6ms  , Painting 5.2ms    , Other 68.9ms
     After I add that code   : Scripting 68.ms   , Rendering 29.1ms  , Painting 5.8ms    , Other 50.4ms 
     
+    So when should I use this?
+        1. when the components that will be rendering are list.
+        2. when the component that will be rendering is in the list components.
+        3. when there are many subcomponents and re-rendering is carried out even in situations where it should not be re-rendering.
+
+<br>
+
+#### when I send a lot of props to subcompoents, I need to send useless props to some of their parent in the parent components. it is one of ways to damage the readability of the code. I can prevent this using Redux.
+  
+<br>
+
+#### things I never do when I use Redux.
+1. Don't create store than more one. but I can create reduxer more than one.
+2. The state is for reading only. It can lead to some bugs when Redux is working.
+3. every change has to be by Redux function. the result with same parameters have to return same result always. Don't use new Date(), Math.random or something like that include DataBase Data.
+
+<br>
     
-    <br>
-
-
-
    
     
 
