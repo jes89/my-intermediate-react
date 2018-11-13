@@ -200,7 +200,7 @@
 <br>
 
 
-### By using shouldComponentUpdate, we identified improvements in performance. There is a need to check that performance can be optimized Whenever I develop the project.
+### By using shouldComponentUpdate, I identified improvements in performance. There is a need to check that performance can be optimized Whenever I develop the project.
 
     shouldComponentUpdate(nextProps, nextState){
         return this.props.done !== nextProps.done;
