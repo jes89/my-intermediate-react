@@ -60,7 +60,7 @@
 
 <br>
     
-### When I bind method, it should be in the constructor. However, it is anooything to add the bind whenver I make mothed more and more. I don't have to bind my method as long as I use transform-class-propertues in babel
+### When I bind method, it should be in the constructor. However, it is annoying to add the bind whenver I make mothed more and more. I don't have to bind my method as long as I use transform-class-propertues in babel
     
     onChangeEventHandler = (e) => {
         this.setState({message : e.target.value})
