@@ -216,7 +216,7 @@
 
 <br>
 
-### when I send a lot of props to subcompoents, I need to send useless props to some from their parents to subcompoents. it is one of ways to damage the readability of the code. In addition, the root js have to have all of date what will be used by its children components. I can prevent this case by using Redux. 
+### when I send a lot of props to subcompoents, I need to send useless props to some from parent components to subcompoents. it is one of ways to damage the readability of the code. In addition, the root js have to have all of date what will be used by its children components. I can prevent this case by using Redux. 
   
 #### Things I never do when I use Redux.
 1. Don't create store more than one. but I can create reduxer more than one.
