@@ -235,4 +235,31 @@
 <br/>
 
 
+### It is annoying to modify thress files (actions.js, actionTypes.js, reducers.js ) in redux. 
+### So I can consider to apply [Ducks structure](https://github.com/erikras/ducks-modular-redux). 
+### By doing so, Three files can be managed in one.
+    
+    DucksModule.js
+    
+    //actionType
+    const CREATE = 'my-app/todos/CREATE'
+    
+    //action function
+    export const create = (todo) => ({
+        type : CREATE,
+        todo
+    })
+    
+    const initialState = {
+        ...
+    }
+    
+    export default function reducer(state = initialState, action){
+        switch(action.type){
+            reducer code
+        }
+    }
+    
+<br>
 
+### 
