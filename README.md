@@ -278,7 +278,8 @@
     
     instead of this code
     
-    export const increment = createAction(types.INCREMENT);
+    export const increment = createAction(types.INCREMENT); 
+    //when you want to make sure what you do ->  increment = createAction(types.INCREMENT, ({idx, name})=>(idx, name)); 
     
     increment({idx : 0, name : 'jes'})
     
