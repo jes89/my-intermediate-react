@@ -262,4 +262,31 @@
     
 <br>
 
-### 
+### Automating events using redux-actions
+    
+    yarn add redux-actions
+    
+    import { createAction, handleActions } from 'redux-actions';
+    
+    export const increment = (idx, name) => ({
+        type : type.INCRMENT,
+        idx,
+        name
+    })
+    
+    increment({idx : 0, name : 'jes'})
+    
+    instead of this code
+    
+    export const increment = createAction(types.INCREMENT);
+    
+    increment({idx : 0, name : 'jes'})
+    
+<br/>
+
+
+    
+    
+    
+    
+    
