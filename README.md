@@ -276,12 +276,32 @@
     
     increment({idx : 0, name : 'jes'})
     
-    instead of this code
+    //instead of this(↑) code
     
     export const increment = createAction(types.INCREMENT); 
-    //when you want to make sure what you do ->  increment = createAction(types.INCREMENT, ({idx, name})=>(idx, name)); 
     
     increment({idx : 0, name : 'jes'})
+    //when you want to make sure what you do 
+    //->  increment = createAction(types.INCREMENT, ({idx, name})=>(idx, name)); 
+    
+    
+    switch(action.type){
+        case types.INCREMENT : 
+            return{
+                number : state.number + 1
+            }
+       ...
+        default : 
+            return state;
+    }
+    
+    //instead of this(↑) code
+    
+    const reducer = handleActions({
+        INCREMENT:(state,action) => ({
+            counter : state.counter + action.payplad
+        })
+    }, {counter : 0});
     
 <br/>
 
