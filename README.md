@@ -236,7 +236,7 @@
 
 
 ### It is annoying to modify thress files (actions.js, actionTypes.js, reducers.js ) in redux. 
-### So I can consider to apply [Ducks structure](https://github.com/erikras/ducks-modular-redux). 
+### So I can consider to apply [Ducks structure](https://github.com/erikras/ducks-modular-redux) to my project. 
 ### By doing so, Three files can be managed in one.
     
     DucksModule.js
