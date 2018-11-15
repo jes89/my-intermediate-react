@@ -314,8 +314,8 @@
     
     package.json
     
-    "start": "NODE_PATH=src react-scripts start",
-    "build": "NODE_PATH=src react-scripts build",
+    "start": "croess-evn NODE_PATH=src react-scripts start",
+    "build": "croess-evn NODE_PATH=src react-scripts build",
     
     
     
