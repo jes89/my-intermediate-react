@@ -328,7 +328,7 @@
     const About = ({location, match}) =>{
 
         const query = queryString.parse(location.search);
-        console.log(query);
+        const { idx, name, title, contents} = query;
         
         ...
     }
