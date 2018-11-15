@@ -308,6 +308,10 @@
 
 ### If I am allowed to file by only relative path, I have to I have to approach files like ../../../../components/myComponents sometime. ### The way to prevent this case is configuration.
     
+    If I am on Window Os. Add the croess-evn.
+    
+    yarn add cross-env
+    
     package.json
     
     "start": "NODE_PATH=src react-scripts start",
