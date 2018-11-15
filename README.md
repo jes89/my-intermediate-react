@@ -377,5 +377,20 @@
 ### express framework don't offer that function officially so I deal with these function myself.
     
     yarn add koa
+
+### IF I want to refresh my browser when I modify my code.
+    
+    yarn add --dev nodemon
+    
+    package.json
+    
+    scripts : {
+        "start" : "node src",
+        "start:dev" : "nodemon --watch src/ src/index.js"
+    }
+    
+    yarn start
+    yarn start:dev
     
     
+<br/>
