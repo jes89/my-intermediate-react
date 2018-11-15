@@ -359,4 +359,18 @@
     
 <br>
 
+### How to build for product. 
+    
+    //after code splitting
+    
+    yarn build
+    
+    yarn global add serve // npm install -g serve
+    
+    serve -s build
+    
+    
 
+    
+    
+    
