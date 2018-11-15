@@ -318,5 +318,17 @@
     "start": "croess-evn NODE_PATH=src react-scripts start",
     "build": "croess-evn NODE_PATH=src react-scripts build",
     
+
+### When I want to get parameters from URL. 
+
+    yarn add query-string 
     
+    import queryString from 'query-string';
     
+    const About = ({location, match}) =>{
+
+        const query = queryString.parse(location.search);
+        console.log(query);
+        
+        ...
+    }
