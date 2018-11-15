@@ -359,9 +359,8 @@
     
 <br>
 
-### How to build for product. 
-    
-    //after code splitting
+### How to build for product after code splitting. 
+
     
     yarn build
     
@@ -369,8 +368,10 @@
     
     serve -s build
     
-    
 
+<br>
+
+### 
     
     
     
