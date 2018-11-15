@@ -349,9 +349,9 @@
         return (
             <div>
                 <ul>
-                    <li><NavLink exact to ="/" activeStyle={activeStyle}>홈</NavLink></li>
-                    <li><NavLink exact to ="/about" activeStyle={activeStyle}>소개</NavLink></li>
-                    <li><NavLink to ="/about/react" activeStyle={activeStyle}>React 소개</NavLink></li>
+                    <li><NavLink exact to ="/" activeStyle={activeStyle}>Home</NavLink></li>
+                    <li><NavLink exact to ="/about" activeStyle={activeStyle}>About</NavLink></li>
+                    <li><NavLink to ="/about/react" activeStyle={activeStyle}>About React</NavLink></li>
                 </ul>
             </div>
         )
