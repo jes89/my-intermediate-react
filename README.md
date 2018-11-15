@@ -306,9 +306,12 @@
 <br/>
 
 
-### package.json start and build settings
+### If I am allowed to file by only relative path, I have to I have to approach files like ../../../../components/myComponents sometime. ### The way to prevent this case is configuration.
     
+    package.json
     
+    "start": "NODE_PATH=src react-scripts start",
+    "build": "NODE_PATH=src react-scripts build",
     
     
     
