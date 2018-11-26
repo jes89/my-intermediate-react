@@ -1,0 +1,48 @@
+
+.left-menu {
+    width: 220px;
+    height: 100%;
+    transition-property: margin;
+    transition-duration: 0.3s;
+    overflow: auto;
+    position: fixed;
+    background: #39435C;
+    z-index:2; 
+    margin-left:-220px;
+
+    .left-wrap {
+        height: 65px;
+    }
+    
+    .user-panel {
+        padding : 10px;
+        height: 45px;
+        .profile-img {
+            float: left;
+            .img-circle {
+                border-radius: 50%
+            }
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        .user-name{
+            color: #eee;
+            height: 100%;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.left-menu.active {
+    margin-left: 0;
+
+}
