@@ -24,7 +24,7 @@ class App extends Component {
 
     const {isLeftMenuOpend} = this.state;
     const handleLeftMenuToggle = this.handleLeftMenuToggle;
-
+  
     return (
         <Fragment>
           <Header handleLeftMenuToggle={handleLeftMenuToggle.bind(this)}></Header>

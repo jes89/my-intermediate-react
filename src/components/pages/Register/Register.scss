@@ -1,0 +1,109 @@
+.register-wrapper{
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+  
+    .register-from{
+      
+        display: table-cell;
+        vertical-align: middle;
+  
+      .register-from-section{
+        height: 500px;
+        .register-from-center{
+          width: 400px;
+          margin: auto;
+          height: 100%;
+          text-align: left;
+  
+          h2{
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+          }
+  
+          .form-group{
+            margin-bottom: 15px;
+  
+            label {
+              display: inherit;
+              max-width: 100%;
+              margin-bottom: 5px;
+              font-weight: 700;
+            }
+  
+            .form-control{
+              width: 100%;
+              height: 34px;
+              padding: 6px 12px;
+              font-size: 14px;
+              line-height: 1.42857143;
+              color: #555;
+              background-color: #fff;
+              background-image: none;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+              -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+              -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+              transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+
+            .exists-user{
+              color: #d73a49;
+            }
+          }
+  
+          .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+          }
+  
+          .btn-link{
+            border-color: transparent;
+            font-weight: 400;
+            border-radius: 0;
+            color: #23527c;
+            text-decoration: none;
+            
+          }
+  
+          .btn-link:hover{
+            color: #23527c;
+            text-decoration: underline;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }

@@ -1,56 +1,75 @@
 import React, { Component} from "react";
-import {Link} from 'react-router-dom';
+import {Link, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from "./Login.scss";
-import axios from 'axios';
-
 
 const cx = classNames.bind(styles);
 
 class Login extends Component {
 
   state = {
-    userId : '',
-    password : '' ,
+    userId : null,
+    password : null ,
+    redirect: false
   }
 
   handleChnage = (e) => {
-    console.log.bind(e.target.value);
-  }
-
-  handleSubmit = (e) => {
-    alert('Your favorite flavor is: ' + this.state.value);
-    e.preventDefault();
+    this.setState({
+      [e.target.name] : e.target.value
+    })
   }
 
   handleLogin = () => {
-    axios.post('/loginAction', {
-      userId: 'jes',
-      password: 'jes89'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
+    
+    const url = 'http://localhost:3001/loginAction';
+    const that = this;
+    const { userId , password } = this.state;
+    const loginData = {
+      userId ,
+      password , 
+    }
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      }).then(function(response) {
+        return response.json();
+      }).then(function(jsonObj) {
+
+        if(jsonObj["msg"] === "success"){
+          that.setState({ redirect: true });
+        } else{
+          alert('No match data.');
+        }
     });
   }
 
   render() {
+    
+    const { redirect } = this.state;
 
-      return(
+    if (redirect) {
+      return <Redirect to = '/'/>;
+    }
+
+    return(
+      <aside>
         <form className={cx('login-wrapper')} >
             <div className={cx('login-from')}>
               <div className={cx('login-from-section')}>
                 <div className={cx('login-from-center')}>
                   <h2>Login</h2>
                   <div className={cx('form-group')}>
-                    <label htmlFor="username">Username</label>
-                    <input type="text" className={cx('form-control')} onChange={this.handleChnage} name="username" ></input>
+                    <label htmlFor="username">UserId</label>
+                    <input type="text" className={cx('form-control')} name="userId" onChange={this.handleChnage}  ></input>
                   </div>
                   <div className={cx('form-group')}>
                     <label htmlFor="password">Password</label>
-                    <input type="password" className={cx('form-control')} name="password"></input>
+                    <input type="password" className={cx('form-control')} name="password" onChange={this.handleChnage} ></input>
                   </div><div className={cx('form-group')}>
                   <button type="button" className={cx('btn btn-primary')} onClick={this.handleLogin}>Login</button>
                   <Link className={cx('btn-link', 'btn')} to='/Register'>Register</Link>
@@ -59,7 +78,8 @@ class Login extends Component {
               </div>
             </div>
         </form >
-      )
+      </aside>
+    )
   }
 }
 
