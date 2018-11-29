@@ -3,6 +3,7 @@ import {Link, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from "./Login.scss";
 import axios from 'axios';
+import backendConf from 'config/backend-server';
 
 const cx = classNames.bind(styles);
 
@@ -22,7 +23,7 @@ class Login extends Component {
 
   handleLogin = () => {
     
-    const url = 'http://localhost:3001/loginAction';
+    const url = backendConf.domain + '/loginAction';
     const that = this;
     const { userId , password } = this.state;
     const loginData = {
