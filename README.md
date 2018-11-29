@@ -308,10 +308,9 @@
 
 ### If I am allowed to file by only relative path, I have to I have to approach files like ../../../../components/myComponents sometime. ### The way to prevent this case is configuration.
     
-    If I am on Window Os. Add the croess-evn.
-    //Eventhough I modify NODE_PATH, the webpack is working very since the webpack use resolve and resolve also use NODE_PATH 
+    //create .env file at root.
+    // input  NODE_PATH=src text
     
-    yarn add cross-env
     
     package.json
     
