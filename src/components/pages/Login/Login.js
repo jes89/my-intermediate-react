@@ -2,6 +2,7 @@ import React, { Component} from "react";
 import {Link, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from "./Login.scss";
+import axios from 'axios';
 
 const cx = classNames.bind(styles);
 
@@ -29,23 +30,23 @@ class Login extends Component {
       password , 
     }
 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(loginData)
-      }).then(function(response) {
-        return response.json();
-      }).then(function(jsonObj) {
+    let data = JSON.stringify(loginData);
 
+    axios.post(url, data, {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then((response)=>response['data'])
+    .then((jsonObj)=>{
         if(jsonObj["msg"] === "success"){
           that.setState({ redirect: true });
         } else{
           alert('No match data.');
         }
     });
+
+
   }
 
   render() {

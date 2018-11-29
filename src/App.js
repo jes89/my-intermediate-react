@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import resetStyle from './styles/reset.scss';
 import mainStyle from './styles/root.scss';
 import { Route, Switch} from "react-router-dom";
+import axios from 'axios';
 
 const cx = classNames.bind({mainStyle,resetStyle});
 
