@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import styles from './LeftMenu.scss';
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
@@ -12,8 +13,9 @@ class LeftMenu extends Component {
 
     render() {
         
-        const {profileImg} = this.state;
-        const {isLeftMenuOpend} = this.props;
+        const { profileImg } = this.state;
+        const { isLeftMenuOpend, sUser } = this.props;
+
         const UserPanel = () => {
             return(
             <div className={cx('user-panel')}>
@@ -35,7 +37,19 @@ class LeftMenu extends Component {
         const UserInfo = () => {
             return(
                 <div className={cx('user-name')}>
-                    <span>Hello jes89</span>
+                        {
+                            (() => {
+                            if (sUser == null) {
+                                return (<span>Loading...</span>);
+                            } else if(sUser === 'noLogin'){
+                                return (<span>Please loging...</span>);
+                            } else if(typeof(sUser) === 'object'){
+                                return (<span>Hello {sUser.userNm}</span>);
+                            } else{
+                                console.log(typeof(sUser));
+                            }
+                            })()
+                        }
                 </div>
             )
         }

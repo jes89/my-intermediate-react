@@ -25,6 +25,7 @@ class Login extends Component {
     
     const url = backendConf.domain + '/loginAction';
     const that = this;
+    const {saveSessionUser} = this.props;
     const { userId , password } = this.state;
     const loginData = {
       userId ,
@@ -41,6 +42,8 @@ class Login extends Component {
     .then((response)=>response['data'])
     .then((jsonObj)=>{
         if(jsonObj["msg"] === "success"){
+
+          saveSessionUser(jsonObj["user"]);
           that.setState({ redirect: true });
         } else{
           alert('No match data.');
