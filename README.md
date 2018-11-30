@@ -309,11 +309,11 @@
 ### If I am allowed to file by only relative path, I have to I have to approach files like ../../../../components/myComponents sometime. ### The way to prevent this case is configuration.
     
     //create .env file at root.
-    // input  NODE_PATH=src text
     
-    
+    .env 
+    NODE_PATH=src
+
     package.json
-    
     "start": "croess-evn NODE_PATH=src react-scripts start",
     "build": "croess-evn NODE_PATH=src react-scripts build",
     
